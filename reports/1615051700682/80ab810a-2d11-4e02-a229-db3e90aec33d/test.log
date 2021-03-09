@@ -1,0 +1,4 @@
+[2021-03-06 08:28:29] [IMessager.java] [1] [INFO] INFO: '**************** Test execution summary ****************'.
+[2021-03-06 08:28:29] [IMessager.java] [1] [INFO] RESULT #1: TEST [Default test - testCompareModels] FAIL [log=./1615051700682/3be97894-6118-456b-b63d-f5c71aa410fa/test.log]
+[2021-03-06 08:28:29] [IMessager.java] [1] [INFO] RESULT #2: TEST [Default test - testModelSpecs] FAIL [log=./1615051700682/df51a829-14ab-466a-9889-f1651a571a59/test.log]
+[2021-03-06 08:28:29] [IMessager.java] [1] [INFO] RESULT #3: TEST [Default test - testNewsSearch] FAIL [log=./1615051700682/03095c3c-7d16-4264-ac2e-bba49b593bcb/test.log]

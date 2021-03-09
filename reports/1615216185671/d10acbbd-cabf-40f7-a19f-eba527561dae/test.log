@@ -1,0 +1,5 @@
+[2021-03-08 06:10:39] [IMessager.java] [1] [INFO]  TEST [Default test - testHomePage] STARTED at [18:10:39 2021-03-08]
+[2021-03-08 06:10:39] [AbstractCapabilities.java] [1] [INFO] Set Chrome language to: en_US
+[2021-03-08 06:10:41] [IMessager.java] [1] [INFO] INFO: url 'https://www.olx.ua/' is being opened...
+[2021-03-08 06:10:49] [DriverListener.java] [1] [INFO] INFO: url 'https://www.olx.ua/' is opened.
+[2021-03-08 06:10:50] [IMessager.java] [1] [INFO]  TEST [Default test - testHomePage] PASSED at [18:10:50 2021-03-08]
