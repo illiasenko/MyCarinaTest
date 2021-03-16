@@ -10,35 +10,28 @@ import com.qaprosoft.carina.core.foundation.utils.tag.TestTag;
 import com.qaprosoft.carina.demo.gui.mypages.MyHomePage;
 import com.qaprosoft.carina.demo.gui.mypages.MyLoginPage;
 
-/**
- * This sample shows how create Web test.
- * 
- * @author qpsdemo
- */
-public class MyLoginTest extends AbstractTest {
+public class MyFailLoginTest extends AbstractTest{
 
+	
 	private String username = "firstcarinatest2021@gmail.com";
 	private String password = "Myfirsttest1";
-
-	@Test(description = "Login_test")
+	
+	@Test(description = "Search_test")
     @MethodOwner(owner = "qpsdemo")
-    @TestPriority(Priority.P2)
-    @TestTag(name = "area test", value = "web")
-	public void testMyAccount() {
-				
-		
+    @TestPriority(Priority.P1)
+	 @TestTag(name = "area test", value = "web")
+	public void runFailTest() {
 		
 		MyHomePage homePage = new MyHomePage(getDriver());
 		homePage.open();
 		Assert.assertTrue(homePage.isPageOpened(), "Home page is not opened");
 		homePage.openMyAccount();
 		MyLoginPage loginPage = new MyLoginPage(getDriver());
-		loginPage.chooseLogin();
 		loginPage.inputAccount(username);
 		loginPage.inputPassword(password);
+		String actualLogin = loginPage.getName();
+		Assert.assertNotEquals(actualLogin, loginPage, actualLogin);
 		loginPage.selectRobotCheck();
 		loginPage.loginToAccount();
-		
-	}		
+	}
 }
-

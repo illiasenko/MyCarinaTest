@@ -8,20 +8,20 @@ import com.qaprosoft.carina.core.gui.AbstractPage;
 public class MyLoginPage extends AbstractPage {
 	
 
-	@FindBy (id = "UserEmail")
-	private ExtendedWebElement userEmail;
+	@FindBy (id = "login_tab")
+	private ExtendedWebElement loginPick;
 	
-	@FindBy(id = "UserPass")
+	@FindBy (xpath = "//*[contains(@title,'Email или номер телефона')]")
+	private ExtendedWebElement userEmail;
+			
+	@FindBy(xpath = "//*[contains(@title,'Ваш текущий пароль от OLX')]")
 	private ExtendedWebElement userPass;
 	
-	@FindBy(xpath =  "//*[contains(@class,'rc-anchor-error-msg-container')]")
+	@FindBy(xpath =  "//*[contains(@id,'recaptcha-anchor')]")
 	private ExtendedWebElement robotCheck;
 	
 	@FindBy(id = "se_userLogin")
 	private ExtendedWebElement loginButton;
-	
-	@FindBy(xpath = "//a[@class='login-button login-button--facebook']")
-	private ExtendedWebElement loginWithFacebookButton;
 	
 	@FindBy(id = "register_tab")
 	private ExtendedWebElement registerTab;
@@ -31,7 +31,10 @@ public class MyLoginPage extends AbstractPage {
 	        super(driver);
 	    }
 
-	  
+	  	public void chooseLogin() {
+	  		loginPick.click();
+	  	}
+	 
 	    public void inputAccount(String name) {
 	    userEmail.type(name);
 	    }
@@ -50,21 +53,19 @@ public class MyLoginPage extends AbstractPage {
 	        assertElementPresent(userPass);
 	        return userPass.getText();
 	    }    
-	    public void selectRobotCheck() {
-	        robotCheck.click();
-	    }
-	  
+	    	    
 	    public void loginToAccount() {
-	    	loginButton.click();
+	   	    	loginButton.click();
 	    }
-	    
-	    public void loginViaFacebook() {
-	    	loginWithFacebookButton.click();
-	    }
-	    
+
 	    public void enterRegistration() {
 	    	registerTab.click();
 	    }
+
+		public void selectRobotCheck() {
+			robotCheck.click();
+			
+		}
     
 	    
 }

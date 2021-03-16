@@ -1,8 +1,9 @@
 package com.qaprosoft.carina.demo.gui.mypages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
-import com.qaprosoft.carina.core.gui.AbstractPage;
+
 import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement;
+import com.qaprosoft.carina.core.gui.AbstractPage;
 
 public class MyAdvertisment extends AbstractPage {
 	

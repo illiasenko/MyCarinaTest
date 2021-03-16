@@ -9,36 +9,39 @@ import com.qaprosoft.carina.core.foundation.utils.tag.TestPriority;
 import com.qaprosoft.carina.core.foundation.utils.tag.TestTag;
 import com.qaprosoft.carina.demo.gui.mypages.MyHomePage;
 import com.qaprosoft.carina.demo.gui.mypages.MyLoginPage;
+import com.qaprosoft.carina.demo.gui.mypages.MyRegistrationPage;
 
 /**
  * This sample shows how create Web test.
  * 
  * @author qpsdemo
  */
-public class MyLoginTest extends AbstractTest {
+public class MyRegistrationTest extends AbstractTest {
 
 	private String username = "firstcarinatest2021@gmail.com";
 	private String password = "Myfirsttest1";
-
-	@Test(description = "Login_test")
+	
+	
+	@Test(description = "Register_test")
     @MethodOwner(owner = "qpsdemo")
-    @TestPriority(Priority.P2)
+    @TestPriority(Priority.P4)
     @TestTag(name = "area test", value = "web")
-	public void testMyAccount() {
-				
-		
-		
+	
+	public void registrationTest() {
 		MyHomePage homePage = new MyHomePage(getDriver());
 		homePage.open();
-		Assert.assertTrue(homePage.isPageOpened(), "Home page is not opened");
 		homePage.openMyAccount();
 		MyLoginPage loginPage = new MyLoginPage(getDriver());
-		loginPage.chooseLogin();
-		loginPage.inputAccount(username);
-		loginPage.inputPassword(password);
-		loginPage.selectRobotCheck();
-		loginPage.loginToAccount();
-		
-	}		
+		loginPage.enterRegistration();
+		MyRegistrationPage registerPage = new MyRegistrationPage(getDriver());
+		registerPage.enterEmail(username);
+		registerPage.enterPassword(password);
+		Assert.assertEquals(registerPage.newAccount(), "username", "Entered e-mail is invalid!" );
+		Assert.assertEquals(registerPage.newPassword(), "password", "Entered password is incorect!");
+		registerPage.isTermAccepted();
+		Assert.assertFalse(registerPage.isTermAccepted(), "Terms are not accepted");
+		registerPage.enterRegisterButton();
+			}
+
 }
 
