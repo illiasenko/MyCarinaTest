@@ -1,3 +1,0 @@
-[2021-03-06 09:07:47] [IMessager.java] [1] [INFO] INFO: '**************** Test execution summary ****************'.
-[2021-03-06 09:07:47] [IMessager.java] [1] [INFO] RESULT #1: TEST [Default test - tesMyAccount] FAIL [log=./1615053995720/9d5c1e6d-c725-4655-b7d9-b614c4f9c5db/test.log]
-[2021-03-06 09:07:47] [IMessager.java] [1] [INFO] RESULT #2: TEST [Default test - testHomePage] FAIL [screenshots=./1615053995720/90fae113-62a4-41c5-ba1d-7c62fb4780f9/report.html | log=./1615053995720/90fae113-62a4-41c5-ba1d-7c62fb4780f9/test.log]

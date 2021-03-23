@@ -1,4 +1,0 @@
-[2021-03-08 06:06:38] [IMessager.java] [1] [INFO] INFO: '**************** Test execution summary ****************'.
-[2021-03-08 06:06:38] [IMessager.java] [1] [INFO] RESULT #1: TEST [Default test - testFacebook] FAIL [screenshots=./1615215913647/f5baed32-d63e-4453-a0eb-bb9689a4fd02/report.html | log=./1615215913647/f5baed32-d63e-4453-a0eb-bb9689a4fd02/test.log]
-[2021-03-08 06:06:38] [IMessager.java] [1] [INFO] RESULT #2: TEST [Default test - testHomePage] FAIL [screenshots=./1615215913647/ca0d2b91-39e7-4160-b5f7-76aacd2b17c3/report.html | log=./1615215913647/ca0d2b91-39e7-4160-b5f7-76aacd2b17c3/test.log]
-[2021-03-08 06:06:38] [IMessager.java] [1] [INFO] RESULT #3: TEST [Default test - testMyAccount] FAIL [screenshots=./1615215913647/51455dd5-fa3b-442f-8f25-b924345a7194/report.html | log=./1615215913647/51455dd5-fa3b-442f-8f25-b924345a7194/test.log]
